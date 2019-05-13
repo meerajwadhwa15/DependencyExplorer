@@ -1,0 +1,55 @@
+form {
+    width: 50%;
+}
+
+input,
+button {
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 14px;
+}
+
+form>div {
+    box-sizing: border-box;
+    width: 85%;
+}
+
+input {
+    width: 100%;
+    text-align: center;
+}
+
+button {
+    width: 15%;
+}
+
+.autocomplete-item {
+    padding: 10px;
+}
+
+.autocomplete-item>div {
+    font-size: 14px;
+}
+
+.autocomplete-item>p {
+    font-size: 12px;
+    margin: 5px 0 0;
+}
+
+@media(max-width: 787px) {
+    form {
+        width: 90%;
+    }
+}
+
+@media(max-width: 440px) {
+
+    form>div {
+        width: 80%;
+    }
+
+    button {
+        width: 20%;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,16 @@
+import { GET_DEPENDENCY, GET_DEPENDENCY_SUCCESS, GET_PACKAGE_SUCCESS } from './Constants';
+
+export const getDependency = (searchString) => ({
+    type: GET_DEPENDENCY,
+    searchString
+});
+
+export const getDependencySuccess = (data) => ({
+    type: GET_DEPENDENCY_SUCCESS,
+    data
+});
+
+export const getPackageSuccess = (data) => ({
+    type: GET_PACKAGE_SUCCESS,
+    data
+});
