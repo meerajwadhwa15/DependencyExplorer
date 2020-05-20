@@ -17,13 +17,13 @@ class Dependency extends PureComponent {
     render() {
         const { dependencies, packageInformation } = this.props;
 
-        return <div class="dependency-page">
+        return <div className="dependency-page">
             {packageInformation ?
                 <PackageInfo packageInformation={packageInformation} /> : <div className="col-md-6 col-xs-12">Loading...</div>}
-            {dependencies ?
+            {dependencies && dependencies.length ?
                 (<div className="col-md-6 col-xs-12">
                     <p>Total dependencies: <strong>{dependencies.length}</strong></p>
-                    <DependencyList dependencies={dependencies} />
+                    <DependencyList key={dependencies.name} dependencies={dependencies} />
                 </div>)
                 : <div className="col-md-6 col-xs-12">Loading...</div>}
         </div>

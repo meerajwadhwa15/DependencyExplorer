@@ -7,7 +7,7 @@ export default ({ dependencies }) => (
         {dependencies.map((dependency, i) => (<li key={`dependency-${i}`}>
             <Fragment>
                 <Anchor target="__blank" title={dependency.name} href={dependency.homepage}>{dependency.name}</Anchor>
-                <p class="description">{dependency.description}</p>
+                <p className="description">{dependency.description}</p>
             </Fragment>
         </li>))}
     </ol>

@@ -1,11 +1,12 @@
 import { takeLatest, all, call, put } from 'redux-saga/effects';
 import { GET_DEPENDENCY } from './Constants';
-import { getDependencySuccess, getPackageSuccess } from './Actions';
+import { getDependencySuccess, getPackageSuccess, clearPackagesAndDependencies } from './Actions';
 import fetch from './../../../libs/fetch';
 import { API_DOMAIN } from './../../../config/constants';
 import Utils from './../../../utils/utils';
 
 function* getDependencies({ searchString }) {
+    yield put(clearPackagesAndDependencies());
     const data = yield call(fetch, `${API_DOMAIN}/${searchString}/latest`);
     const dependency = [];
     yield put(getPackageSuccess(data));
