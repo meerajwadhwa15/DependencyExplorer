@@ -9,7 +9,7 @@ function App() {
     <Router>
       <div className="App">
         <Route path="/" exact component={SearchLayout} />
-        <Route path="/dependency/:searchString" component={DependencyLayout} />
+        <Route path="/detail/:searchString" component={DependencyLayout} />
       </div>
     </Router>
   );
